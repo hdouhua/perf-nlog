@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net6.0;</TargetFrameworks>
     <RootNamespace>Perf_Nlog</RootNamespace>
     <Nullable>enable</Nullable>
     <Optimize>true</Optimize>
@@ -13,8 +13,4 @@
     <PackageReference Include="NLog" Version="4.7.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="FileLogging.cs" />
-    <Compile Remove="NoOpLogging.cs" />
-  </ItemGroup>
 </Project>

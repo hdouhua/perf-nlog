@@ -59,6 +59,8 @@ recommended setting for project
 
 ## reference
 
+- [Configure from code](https://github.com/NLog/NLog/wiki/Configure-from-code)
 - [File target](https://github.com/NLog/NLog/wiki/File-target)
 - [AsyncWrapper target](https://github.com/NLog/NLog/wiki/AsyncWrapper-target)
-- [Nlog best practices](https://github.com/NLog/NLog/wiki/Performance)
+- [Performance](https://github.com/NLog/NLog/wiki/Performance)
+- [Nlog best practices](hhttps://github.com/NLog/NLog/wiki/Tutorial#best-practices-for-using-nlog)

@@ -1,11 +1,20 @@
-﻿using BenchmarkDotNet.Attributes;
+﻿using System.Threading;
+using BenchmarkDotNet.Attributes;
 using NLog;
 
 namespace Perf_Nlog
 {
     partial class BaseTest
     {
-        // [Benchmark]
+        private static int _stringLogIndex;
+
+        [Benchmark]
+        public object CreateFromString()
+        {
+            return LogManager.GetLogger("my-logger_" + (Interlocked.Increment(ref _stringLogIndex) % 1000));
+        }
+
+        [Benchmark]
         public object CreateTypeOfLogger()
         {
             return new[]
@@ -32,7 +41,7 @@ namespace Perf_Nlog
             };
         }
 
-        // [Benchmark]
+        [Benchmark]
         public object CreateDynamicLogger()
         {
             return new[]
@@ -58,5 +67,6 @@ namespace Perf_Nlog
                 LogManager.GetCurrentClassLogger(),
             };
         }
+
     }
 }
