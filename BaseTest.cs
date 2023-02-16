@@ -166,6 +166,7 @@ namespace Perf_Nlog
                 MaxArchiveFiles = 1000,
                 AutoFlush = true,
                 ConcurrentWrites = concurrentWrites,
+                OpenFileCacheTimeout = 120,
                 KeepFileOpen = keepFileOpen,
                 Layout = "${longdate}|${threadid}|${level}|${logger}|${message} ${exception:format=tostring}"
             };
